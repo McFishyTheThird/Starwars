@@ -22,37 +22,37 @@ while(yn == "yes" || yn == "y")
         {
             SWCharacter c = JsonSerializer.Deserialize<SWCharacter>(response.Content);
 
-            Console.WriteLine(c.name);
-            Console.WriteLine(c.height);
-            Console.WriteLine(c.mass);
-            Console.WriteLine(c.hairColor);
-            Console.WriteLine(c.skinColor);
+            Console.WriteLine($"Name: {c.name}");
+            Console.WriteLine($"Height: {c.height}");
+            Console.WriteLine($"Mass: {c.mass}");
+            Console.WriteLine($"Hair Color: {c.hairColor}");
+            Console.WriteLine($"Skin Color: {c.skinColor}");
         }
         else if(type == "planets")
         {
             SWPlanet p = JsonSerializer.Deserialize<SWPlanet>(response.Content);
-            Console.WriteLine(p.name);
-            Console.WriteLine(p.rotationPeriod);
-            Console.WriteLine(p.orbitalPeriod);
-            Console.WriteLine(p.diameter);
-            Console.WriteLine(p.climate);
-            Console.WriteLine(p.gravity);
-            Console.WriteLine(p.terrain);
-            Console.WriteLine(p.surfaceWater);
-            Console.WriteLine(p.population);
+            Console.WriteLine($"Name: {p.name}");
+            Console.WriteLine($"Rotation Period: {p.rotationPeriod}");
+            Console.WriteLine($"Orbital Period: {p.orbitalPeriod}");
+            Console.WriteLine($"Diameter: {p.diameter}");
+            Console.WriteLine($"Climate: {p.climate}");
+            Console.WriteLine($"Gravity: {p.gravity}");
+            Console.WriteLine($"Terrain: {p.terrain}");
+            Console.WriteLine($"Surface Water: {p.surfaceWater}");
+            Console.WriteLine($"Population: {p.population}");
         }
         else if(type == "starships")
         {
             SWShip s = JsonSerializer.Deserialize<SWShip>(response.Content);
-            Console.WriteLine(s.name);
-            Console.WriteLine(s.model);
-            Console.WriteLine(s.manufacturer);
-            Console.WriteLine(s.cost);
-            Console.WriteLine(s.length);
-            Console.WriteLine(s.maxAtmospheringSpeed);
-            Console.WriteLine(s.crew);
-            Console.WriteLine(s.passengers);
-            Console.WriteLine(s.cargo);
+            Console.WriteLine($"Name: {s.name}");
+            Console.WriteLine($"Model: {s.model}");
+            Console.WriteLine($"Manufacturer: {s.manufacturer}");
+            Console.WriteLine($"Cost: {s.cost}");
+            Console.WriteLine($"Length: {s.length}");
+            Console.WriteLine($"Max Atmosphering Speed: {s.maxAtmospheringSpeed}");
+            Console.WriteLine($"Crew Size: {s.crew}");
+            Console.WriteLine($"Passengers: {s.passengers}");
+            Console.WriteLine($"Cargo Space: {s.cargo}");
         }
     }
     else
